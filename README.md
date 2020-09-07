@@ -22,8 +22,7 @@ Build a robot to win the sumobot competition i.e. to win, it must be the last ro
 | --- | --- | --- |
 | Provide structure | Maximum base dimension is 200 x 200 mm | Centre of mass |
 | Protect against shock impacts | Maximum weight is 1 kg | Chassis material |
-| High speed to outmanoeuvre opponents | |
-| High torque to push opponents| |
+| High torque to push opponents| | High speed to outmanoeuvre opponents |
 
 ### Fundamental Steps
 
