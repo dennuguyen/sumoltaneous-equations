@@ -83,7 +83,7 @@ struct Bot {
     Wheel rb;
 };
 
-Bot b(PD0, PD1, PD2, PD3, PD4, PD5, PD6, PD7);
+Bot b(PD0, PD1, PD2, PD3, PD4, PD5, PD6, PD7);  // Global object
 
 void setup() {
     pinMode(2, OUTPUT);  // ?
