@@ -80,10 +80,10 @@ class Infrared {
 class Bot {
    private:
     enum wheels {
-        LF,
-        RF,
-        LB,
-        RB,
+        LF,  // left front
+        RF,  // right front
+        LB,  // left back
+        RB,  // right back
     };
     enum sensors {
         FRONT,
