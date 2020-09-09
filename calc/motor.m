@@ -1,3 +1,9 @@
+%{
+
+Calculating required battery or motor specifications.
+
+%}
+
 %% Variables
 
 syms k_i; % rotor inertia (kgm^2)
@@ -25,6 +31,8 @@ eqn5 = P_m == tau * w;
 %{
 
 Given motor specifications we can select a battery.
+
+Make sure to check the stall torque and stall current.
 
 %}
 
