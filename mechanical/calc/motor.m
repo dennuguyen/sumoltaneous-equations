@@ -49,7 +49,6 @@ w_2(V_s) = V_s * I / tau; % (rad/s)
 
 V_s = eval(solve(w_1 == w_2, V_s)); % (V)
 
-
 %% Motor Selection
 
 %{
@@ -57,3 +56,4 @@ V_s = eval(solve(w_1 == w_2, V_s)); % (V)
 Given battery specifications we can select a motor.
 
 %}
+

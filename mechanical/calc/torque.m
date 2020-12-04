@@ -25,23 +25,12 @@ eqn3 = tau == r * F_f; % (Nm)
 
 %{
 
-Bare minimum torque of rubber wheel on rubber ground.
+
 
 %}
 
-m = 1; % (kg)
+m = 2; % (kg); mass of both bots
 N = m * 9.81; % (N)
 F_f = 1.15 * N; % (N); 1.15 is rubber on rubber
 r = 0.065; % (m)
-tau_1 = r * F_f; % (Nm)
-
-%% Torque Calculation
-
-%{
-
-Bare minimum torque to overcome opponent.
-
-%}
-
-tau_opp = 0.04903325; % (Nm); from https://www.createunsw.com.au/store/Tiny-metallic-DC-motor/
-tau_2 = tau_1 + tau_opp; % (Nm)
+tau = r * F_f; % (Nm)

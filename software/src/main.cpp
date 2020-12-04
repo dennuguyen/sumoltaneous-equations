@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <util/twi.h>
 
 struct Pin {
    public:
@@ -138,6 +139,16 @@ class Bot {
             digitalWrite(wheel[i].in2.pno, wheel[i].in2.val);
         }
     }
+    bool search(void) {
+        for (int i = 0; i < 4; i++)
+            if (gnd[i].edge() == true)
+                return true;
+        return false;
+    }
+    void dodge(void) {
+        if (gnd[FRONT].edge() == true)
+            backward();
+    }
 
    private:
     Wheel (&wheel)[4];
@@ -154,7 +165,14 @@ int main(void) {
     Serial.begin(9600);
 
     while (1) {
+        // Game over
+        if (0) break;
+
         // Check edges
+        for (int i = 0; i < 4; i++)
+            ;
+
+        // Find opponent
         for (int i = 0; i < 4; i++)
             ;
 
