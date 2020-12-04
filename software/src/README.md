@@ -10,9 +10,11 @@
 
 2. Clone this repository
 
+3. Install any libraries
+
 ### Libraries
 
-- OpenCV
+- OpenCV (Windows): https://docs.opencv.org/master/d3/d52/tutorial_windows_install.html
 
 ### Target
 
