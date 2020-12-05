@@ -7,6 +7,7 @@
 1. Install Visual Studio 2019
     1. C++ CMake tools for Windows
     2. C++ Clang tools for Windows (10.0.0 - x64/x86)
+    3. Linux development with C++
 
 2. Clone this repository
 
