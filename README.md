@@ -37,8 +37,8 @@ graph LR
     Architecture --> control[Control Loop Structure]
     control --> control_code_doc[Inline Code Documentation]
 
-    Architecture --> interfaces[Interfaces]
-    interfaces --> interfaces_code_doc[Inline Code Documentation]
+    Architecture --> abstract[Abstractions]
+    abstract --> abstract_code_doc[Inline Code Documentation]
 
     Strategy --> avoidance[Edge Avoidance]
     avoidance --> avoidance_code_doc[Inline Code Documentation]
