@@ -20,10 +20,7 @@ graph LR
     Sumobot --> Identification
     Sumobot --> Strategy
 
-    power --> Camera
-    power --> ultrasonic[Ultrasonic Sensor]
-    power --> Controller
-    power --> motors[Wheel Motors]
+    power --> supply[Power Supply]
 
     Identification --> opp[Opponent Identification]
     Identification --> ring[Ring Identification]
