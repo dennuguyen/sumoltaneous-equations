@@ -75,28 +75,3 @@ graph LR
     Electronics --> ultrasonic_mount[Ultrasonic Sensor]
     Electronics --> arduino_mount[Controller]
 ```
-
-## Dependency Graph
-
-```mermaid
-sequenceDiagram
-    participant Platform
-    Note over Platform: LoFi CAD
-    Note over Platform: HiFi CAD
-    Note over Platform: MFG
-    Note over Platform: ASM
-
-    participant Power
-    Note over Power: Schematic
-    Note over Power: CAD
-    Note over Power: Fabrication
-
-    participant Identification
-    Note over Identification: Opponent Identification
-    Note over Identification: Ring Identification
-
-    participant Strategy
-    Note over Strategy: Edge Avoidance
-    Note over Strategy: Push Opponent Strategy
-    Note over Strategy: Random Movement Strategy
-```
