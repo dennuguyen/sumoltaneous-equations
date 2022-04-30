@@ -25,32 +25,18 @@ graph LR
     Sumobot --> Architecture
 
     Identification --> opp[Opponent Identification]
-    opp --> opp_ipynb[IPYNB Documentation]
-    opp --> opp_code_doc[Inline Code Documentation]
-    opp --> opp_val[Validation]
-
     Identification --> ring[Ring Identification]
-    ring --> ring_ipynb[IPYNB Documentation]
-    ring --> ring_code_doc[Inline Code Documentation]
-    ring --> ring_val[Validation]
 
-    Architecture --> control[Control Loop Structure]
-    control --> control_code_doc[Inline Code Documentation]
+    Architecture --> Flow
+    Flow --> control_loop[Control Loop]
 
-    Architecture --> abstract[Abstractions]
-    abstract --> abstract_code_doc[Inline Code Documentation]
+    Architecture --> Abstraction
+    Abstraction --> gpio_interface[GPIO Interface]
+    Abstraction --> kinematic_abstraction[Kinematic Abstraction]
 
     Strategy --> avoidance[Edge Avoidance]
-    avoidance --> avoidance_code_doc[Inline Code Documentation]
-    avoidance --> avoidance_val[Validation]
-
     Strategy --> push[Push Opponent Strategy]
-    push --> push_code_doc[Inline Code Documentation]
-    push --> push_val[Validation]
-
     Strategy --> random[Random Movement Strategy]
-    random --> random_code_doc[Inline Code Documentation]
-    random --> random_val[Validation]
 
     Platform --> Chassis
     Chassis --> chassis_mass[Mass Calculation]
