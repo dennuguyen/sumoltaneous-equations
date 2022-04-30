@@ -6,7 +6,9 @@ Build a UGV to win the sumobot competition i.e. to win, it must be the last robo
 
 ## Requirements
 
-- Sumobot needs to maximise torque.
+- Maximise torque output from motors.
+- Maximise friction between tyres and dohyo.
+- Maximise mass.
 
 ## Work Breakdown Structure
 
