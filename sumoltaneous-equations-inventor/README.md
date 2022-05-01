@@ -1,7 +1,8 @@
-# CAD
+# Sumoltaneous Equations
 
-Anything CAD related goes in here.
+## Autodesk Inventor Professional 2023
 
-## Autodesk Inventor Professional 2022
+1. Go to https://www.autodesk.com/education/edu-software.
+1. Install Autodesk Inventor Professional 2023.
 
-## KiCad
+You will need to provide Autodesk proof that you are a student.
