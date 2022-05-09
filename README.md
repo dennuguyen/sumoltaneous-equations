@@ -84,3 +84,4 @@ graph LR
 - L298N Motor Controller Docs:
 - HC-SR04 Ultrasonic Sensor Docs:
 - Flying Fish IR Sensor Docs:
+- Turnigy 1250 mAh 3S 30C LiPo Battery: https://hobbyking.com/en_us/turnigy-1250mah-3s-30c-lipo-pack-long.html
