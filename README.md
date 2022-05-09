@@ -13,6 +13,10 @@ Build a UGV to win the sumobot competition i.e. to win, it must be the last robo
 - Maximise torque output from motors.
 - Maximise friction between tyres and dohyo.
 - Maximise mass.
+- Max base dimensions is 250 mm x 250 mm.
+- Max weight is 1.5 kg.
+- Must not use additional motors.
+- Must use motors, wheels, and battery provided in the kit.
 
 ## Work Breakdown Structure
 
