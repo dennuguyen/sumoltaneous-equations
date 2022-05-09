@@ -69,3 +69,18 @@ graph LR
     Electronics --> ultrasonic_mount[Ultrasonic Sensor]
     Electronics --> arduino_mount[Controller]
 ```
+
+## Budget
+
+
+
+## Resources
+
+- Japanese Sumobots Documentary: https://youtu.be/mS-L2fpV1Is
+- Sumobot Strategies: https://youtu.be/rthMiqFCiBA
+- SENAI-SC Sumo Robot Example: https://blog.jsumo.com/senai-sc-sumo-robot/.
+- Impala Sumo Robot Example: https://blog.jsumo.com/impala-sumo-robot/.
+- Arduino Nano Docs:
+- L298N Motor Controller Docs:
+- HC-SR04 Ultrasonic Sensor Docs:
+- Flying Fish IR Sensor Docs:
