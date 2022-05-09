@@ -1,5 +1,9 @@
 # Sumoltaneous Equations
 
+## Rules
+
+![rules](README/bot-rules.jpg)
+
 ## Problem Statement
 
 Build a UGV to win the sumobot competition i.e. to win, it must be the last robot to overstep the boundary of the dohyo. It must also adhere to the rules and use the parts provided by UNSW Create.
