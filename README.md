@@ -86,4 +86,5 @@ graph LR
 - MH-B IR Sensor Datasheet: https://components101.com/sites/default/files/component_datasheet/Datasheet%20of%20IR%20%20Sensor.pdf
 - Turnigy 1250 mAh 3S 30C LiPo Battery: https://hobbyking.com/en_us/turnigy-1250mah-3s-30c-lipo-pack-long.html
 - JGA25-370 DC Motor: https://www.aliexpress.com/item/1005001279982165.html
+- JGA25-370 Bracket: https://www.alibaba.com/product-detail/JGA25-370-Fixed-Support-Gear-Motor_1600120808634.html
 - Wheel: https://www.aliexpress.com/item/32870820813.html
