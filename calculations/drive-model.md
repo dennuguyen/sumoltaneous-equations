@@ -44,8 +44,8 @@ $$
 Given the dimensional constraints of the gears:
 $$
 \begin{aligned}
-    d_{out} &= 50 \text{ mm} \\
-    d_{in} &= 25 \text{ mm} \\
+    d_{out} &= 60 \text{ mm} \\
+    d_{in} &= 15 \text{ mm} \\
 \end{aligned}
 $$
 
@@ -53,8 +53,8 @@ With an input torque of $100$ kg/m, the output torque is:
 $$
 \begin{aligned}
     \frac{d_{out}}{d_{in}} &= \frac{\tau_{out}}{\tau_{in}} \\
-    \frac{50}{25} &= \frac{\tau_{out}}{100} \\
-    \therefore \tau_{out} &= 200 \text{ kg/m}
+    \frac{60}{15} &= \frac{\tau_{out}}{100} \\
+    \therefore \tau_{out} &= 400 \text{ kg/m}
 \end{aligned}
 $$
 
