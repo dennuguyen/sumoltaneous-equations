@@ -1,5 +1,7 @@
 # Kinematic Model
 
+![kinematic-model](kinematic-model.drawio.svg)
+
 The sumobot's state-space representation will let us localise the robot.
 
 Let the state vector be:
