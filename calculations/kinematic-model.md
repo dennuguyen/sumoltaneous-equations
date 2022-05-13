@@ -30,5 +30,28 @@ $$
 - $w_{L}$ is the angular veocity for each left wheel.
 - $w_{R}$ is the angular veocity for each right wheel.
 
-Since the two left wheels are driven by a single left motor and two right wheels are driven by a single right motor, the kinematics can be modelled after a two-wheeled differential where the instantaneous centre of rotation is along the centre-line between the front and rear axes.
+The left wheels are driven by a single left motor. The right wheels are driven by a single right motor. The kinematic model can be simplified to be a two-wheeled differential where the instantaneous centre of rotation is along the centre-line between the front and rear axes.
 
+The linear velocity is:
+$$
+v(t) = \frac{R_{wheel}}{2}\left(\omega_{L}(t) + \omega_{R}(t)\right)
+$$
+
+The angular velocity is:
+$$
+\omega(t) = \frac{R_{wheel}}{2L}\left(\omega_{R}(t) - \omega_{L}(t) \right)
+$$
+
+The change in states over time is therefore:
+$$
+\frac{d\vec{x}(t)}{dt} =
+    \left(
+        \begin{matrix}
+            \frac{R_{wheel}}{2}\left(\omega_{L}(t) + \omega_{R}(t)\right) \cdot \cos\left(\phi(t)\right) \\
+            \frac{R_{wheel}}{2}\left(\omega_{L}(t) + \omega_{R}(t)\right) \cdot \sin\left(\phi(t)\right) \\
+            \frac{R_{wheel}}{2L}\left(\omega_{R}(t) - \omega_{L}(t) \right) \\
+        \end{matrix}
+    \right)
+$$
+
+> Very important to recognise that the frame of reference is the centroid of the four wheels.
