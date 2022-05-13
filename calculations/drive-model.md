@@ -57,3 +57,7 @@ $$
     \therefore \tau_{out} &= 200 \text{ kg/m}
 \end{aligned}
 $$
+
+## Control System
+
+A control system is required to control the torque output of the motor. This is done through observing the supplied current.
