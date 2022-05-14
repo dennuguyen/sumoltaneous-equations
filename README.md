@@ -72,8 +72,9 @@ graph LR
 
 ## Budget
 
-- https://au.rs-online.com/web/p/spur-gears/5217641
-- https://au.rs-online.com/web/p/spur-gears/5217477
+| Name | Quantity | Price Per Item | Link |
+| --- | --- | --- | --- |
+| Wheel (65 OD) | 2 | 3 | https://store.createunsw.com.au/yellow-wheel-65-mm |
 
 ## Resources
 
