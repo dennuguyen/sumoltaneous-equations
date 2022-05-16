@@ -38,7 +38,8 @@ graph LR
     Strategy --> random[Random Movement Strategy]
 
     Strategy --> strategy_research[Research]
-    strategy_research --> number_wheels[Optimise Number of Wheels]
+    strategy_research --> research_number_wheels[Research Number of Wheels]
+    strategy_research --> research_kinetic[Research Strategy]
 
     Platform --> Chassis
     Chassis --> chassis_mass[Mass Calculation]
