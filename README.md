@@ -31,10 +31,14 @@ graph LR
     Architecture --> Abstraction
     Abstraction --> gpio_interface[GPIO Interface]
     Abstraction --> kinematic_abstraction[Kinematic Abstraction]
+    Abstraction --> drive_abstraction[Drive Abstraction]
 
     Strategy --> avoidance[Edge Avoidance]
     Strategy --> push[Push Opponent Strategy]
     Strategy --> random[Random Movement Strategy]
+
+    Strategy --> strategy_research[Research]
+    strategy_research --> number_wheels[Optimise Number of Wheels]
 
     Platform --> Chassis
     Chassis --> chassis_mass[Mass Calculation]
@@ -53,11 +57,11 @@ graph LR
     power --> mfg_power[MFG]
 
     Platform --> Electronics
-    Electronics --> driver_mounts[Motor Driver]
-    Electronics --> battery_mount[Battery]
-    Electronics --> camera_mount[Camera]
-    Electronics --> ultrasonic_mount[Ultrasonic Sensor]
-    Electronics --> arduino_mount[Controller]
+    Electronics --> motor_driver[Motor Driver]
+    Electronics --> battery[Battery]
+    Electronics --> ir_sensor[IR Sensor]
+    Electronics --> ultrasonic_sensor[Ultrasonic Sensor]
+    Electronics --> arduino[Controller]
 ```
 
 ## Budget
