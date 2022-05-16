@@ -62,6 +62,7 @@ graph LR
     Electronics --> ir_sensor[IR Sensor]
     Electronics --> ultrasonic_sensor[Ultrasonic Sensor]
     Electronics --> arduino[Controller]
+    Electronics --> imu[IMU]
 ```
 
 ## Budget
@@ -69,6 +70,7 @@ graph LR
 | Name | Quantity | Price Per Item | Link |
 | --- | --- | --- | --- |
 | Wheel (65 OD) | 2 | 3 | https://store.createunsw.com.au/yellow-wheel-65-mm |
+| MPU-6050 | 1| 8 | https://store.createunsw.com.au/gyroscope-accelerometer |
 
 ## Resources
 
