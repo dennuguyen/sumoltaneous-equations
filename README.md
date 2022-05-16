@@ -8,16 +8,6 @@
 
 Build a UGV to win the sumobot competition i.e. to win, it must be the last robot to overstep the boundary of the dohyo. It must also adhere to the rules and use the parts provided by UNSW Create.
 
-## Requirements
-
-- Maximise torque output from motors.
-- Maximise friction between tyres and dohyo.
-- Maximise mass.
-- Max base dimensions is 250 mm x 250 mm.
-- Max weight is 1.5 kg.
-- Must not use additional motors.
-- Must use motors, wheels, and battery provided in the kit.
-
 ## Work Breakdown Structure
 
 WBS is extremely detailed because:
