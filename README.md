@@ -8,16 +8,6 @@
 
 Build a UGV to win the sumobot competition i.e. to win, it must be the last robot to overstep the boundary of the dohyo. It must also adhere to the rules and use the parts provided by UNSW Create.
 
-## Requirements
-
-- Maximise torque output from motors.
-- Maximise friction between tyres and dohyo.
-- Maximise mass.
-- Max base dimensions is 250 mm x 250 mm.
-- Max weight is 1.5 kg.
-- Must not use additional motors.
-- Must use motors, wheels, and battery provided in the kit.
-
 ## Work Breakdown Structure
 
 WBS is extremely detailed because:
@@ -41,10 +31,15 @@ graph LR
     Architecture --> Abstraction
     Abstraction --> gpio_interface[GPIO Interface]
     Abstraction --> kinematic_abstraction[Kinematic Abstraction]
+    Abstraction --> drive_abstraction[Drive Abstraction]
 
     Strategy --> avoidance[Edge Avoidance]
     Strategy --> push[Push Opponent Strategy]
     Strategy --> random[Random Movement Strategy]
+
+    Strategy --> strategy_research[Research]
+    strategy_research --> research_number_wheels[Research Number of Wheels]
+    strategy_research --> research_kinetic[Research Kinetic Strategy]
 
     Platform --> Chassis
     Chassis --> chassis_mass[Mass Calculation]
@@ -63,11 +58,12 @@ graph LR
     power --> mfg_power[MFG]
 
     Platform --> Electronics
-    Electronics --> driver_mounts[Motor Driver]
-    Electronics --> battery_mount[Battery]
-    Electronics --> camera_mount[Camera]
-    Electronics --> ultrasonic_mount[Ultrasonic Sensor]
-    Electronics --> arduino_mount[Controller]
+    Electronics --> motor_driver[Motor Driver]
+    Electronics --> battery[Battery]
+    Electronics --> ir_sensor[IR Sensor]
+    Electronics --> ultrasonic_sensor[Ultrasonic Sensor]
+    Electronics --> arduino[Controller]
+    Electronics --> imu[IMU]
 ```
 
 ## Budget
@@ -75,6 +71,7 @@ graph LR
 | Name | Quantity | Price Per Item | Link |
 | --- | --- | --- | --- |
 | Wheel (65 OD) | 2 | 3 | https://store.createunsw.com.au/yellow-wheel-65-mm |
+| MPU-6050 | 1| 8 | https://store.createunsw.com.au/gyroscope-accelerometer |
 
 ## Resources
 
