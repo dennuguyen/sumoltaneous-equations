@@ -1,4 +1,10 @@
 **/.vs/
 **/build/
+
+# Inventor
 **/OldVersions/
 **/AIP/
+
+# KiCAD
+**/*.zip
+**/fp-info-cache
