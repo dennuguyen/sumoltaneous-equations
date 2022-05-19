@@ -40,6 +40,7 @@ graph LR
     Strategy --> strategy_research[Research]
     strategy_research --> research_number_wheels[Research Number of Wheels]
     strategy_research --> research_kinetic[Research Kinetic Strategy]
+    strategy_research --> research_localisation[Research Localisation Strategy]
 
     Platform --> Chassis
     Chassis --> chassis_mass[Mass Calculation]
