@@ -9,8 +9,8 @@
 
 class Motor {
    public:
-    Motor(unsigned en, unsigned in1, unsigned in2, bool direction = 0)
-        : enable_pin(en), input1_pin(in1), input2_pin(in2), direction(direction) {
+    Motor(unsigned enable, unsigned input1_pin, unsigned input2_pin, bool direction = 0)
+        : enable_pin(enable), input1_pin(input1_pin), input2_pin(input2_pin), direction(direction) {
         pinMode(enable_pin, OUTPUT);
         pinMode(input1_pin, OUTPUT);
         pinMode(input2_pin, OUTPUT);
