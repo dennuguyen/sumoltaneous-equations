@@ -1,1 +1,0 @@
-# Sumoltaneous Equations
