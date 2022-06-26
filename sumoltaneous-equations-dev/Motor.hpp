@@ -1,3 +1,10 @@
+/**
+ * Controls a motor with three pins:
+ *  - enable_pin: accepts PWM value for motor speed in range [0, 255].
+ *  - input1_pin: accepts HIGH or LOW value for motor spin direction.
+ *  - input2_pin: accepts HIGH or LOW value for motor spin direction.
+ */
+
 #pragma once
 
 class Motor {
@@ -9,11 +16,11 @@ class Motor {
         pinMode(input2_pin, OUTPUT);
     }
 
-    void forward(double pwm = 255) {
+    void forward(unsigned pwm = 255) {
         set(pwm, direction, !direction);
     }
 
-    void reverse(double pwm = 255) {
+    void reverse(unsigned pwm = 255) {
         set(pwm, !direction, direction);
     }
 
@@ -22,7 +29,7 @@ class Motor {
     }
 
    private:
-    void set(double pwm, bool in1, bool in2) {
+    void set(unsigned pwm, bool in1, bool in2) {
         analogWrite(enable_pin, pwm);
         digitalWrite(input1_pin, in1);
         digitalWrite(input2_pin, in2);
