@@ -30,3 +30,4 @@ Build a UGV to win the sumobot competition i.e. to win, it must be the last robo
 - JGA25-370 DC Motor: https://www.aliexpress.com/item/1005001279982165.html
 - JGA25-370 Bracket: https://www.alibaba.com/product-detail/JGA25-370-Fixed-Support-Gear-Motor_1600120808634.html
 - Wheel: https://www.aliexpress.com/item/32870820813.html
+- TCRT5000: https://www.vishay.com/docs/83760/tcrt5000.pdf
