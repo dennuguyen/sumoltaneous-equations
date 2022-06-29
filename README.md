@@ -22,6 +22,7 @@ Build a UGV to win the sumobot competition i.e. to win, it must be the last robo
 - SENAI-SC Sumo Robot Example: https://blog.jsumo.com/senai-sc-sumo-robot/.
 - Impala Sumo Robot Example: https://blog.jsumo.com/impala-sumo-robot/.
 - Arduino Nano Datasheet: https://Datasheet.arduino.cc/hardware/nano
+- Arduino Nano Pinout: https://www.makerguides.com/wp-content/uploads/2020/10/arduino-nano-pinout.png
 - L298N Motor Controller Datasheet: https://components101.com/sites/default/files/component_datasheet/L298N-Motor-Driver-Datasheet.pdf
 - HC-SR04 Ultrasonic Sensor Datasheet: https://www.digikey.com/htmldatasheets/production/1979760/0/0/1/hc-sr04.html
 - MH-B IR Sensor Datasheet: https://components101.com/sites/default/files/component_datasheet/Datasheet%20of%20IR%20%20Sensor.pdf
