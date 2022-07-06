@@ -17,6 +17,18 @@ class DistanceSensor {
         return pulseIn(echo_pin, HIGH) / 58.8235;
     }
 
+    float dist() {
+        digitalWrite(trigger_pin, LOW);
+        delayMicroseconds(2);
+        digitalWrite(trigger_pin, HIGH);
+        delayMicroseconds(10);
+        digitalWrite(trigger_pin, LOW);
+        noInterrupts();
+        float d = pulseIn(echo_pin, HIGH, 23529.4); // max sensor dist ~4m
+        interrupts();
+        return d / 58.8235;
+    }
+
    private:
     unsigned trigger_pin;
     unsigned echo_pin;
