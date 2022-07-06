@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Arduino.h>
+
 class DistanceSensor {
    public:
     DistanceSensor(unsigned trigger_pin, unsigned echo_pin, unsigned max_distance = 0.004)
