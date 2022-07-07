@@ -10,15 +10,16 @@ class DistanceSensor {
         pinMode(echo_pin, INPUT);
     }
 
-    double echo() {
-        digitalWrite(trigger_pin, false);
-        delayMicroseconds(2);
-        digitalWrite(trigger_pin, true);
-        delayMicroseconds(10);
-        digitalWrite(trigger_pin, false);
-        return pulseIn(echo_pin, HIGH) / 58.8235;
-    }
+    // double echo() {
+    //     digitalWrite(trigger_pin, false);
+    //     delayMicroseconds(2);
+    //     digitalWrite(trigger_pin, true);
+    //     delayMicroseconds(10);
+    //     digitalWrite(trigger_pin, false);
+    //     return pulseIn(echo_pin, HIGH) / 58.8235;
+    // }
 
+    // returns distance in cm as a float
     float dist() {
         digitalWrite(trigger_pin, LOW);
         delayMicroseconds(2);
