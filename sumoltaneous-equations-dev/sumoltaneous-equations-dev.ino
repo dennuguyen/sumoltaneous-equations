@@ -1,15 +1,19 @@
+#include <array>
+
 #include "DifferentialRobot.hpp"
 #include "DistanceSensor.hpp"
+#include "Drive.hpp"
 #include "IRSensor.hpp"
 #include "Motor.hpp"
 
-DifferentialRobot robot(0.065, 0.18);
-Motor left_motor(1, 19, 20);   // analog, digital, digital
-Motor right_motor(1, 21, 22);  // analog, digital, digital
-DistanceSensor left(5, 6);     // digital, analog
-DistanceSensor front(7, 8);    // digital, analog
-DistanceSensor right(10, 9);   // digital, analog
-IRSensor ir_sensor(11);        // digital
+Motor left_motor(1 /* D1/TX */, 19 /* AO/D14 */, 20 /* A1/D15 */);
+Motor right_motor(1 /* D1/TX */, 21 /* A2/D16 */, 22 /* A3/D17 */);
+Drive drive_model(left_motor, right_motor);
+
+DistanceSensor left(5 /* D2 */, 6 /* ~D3 */);
+DistanceSensor front(7 /* D4 */, 8 /* ~D5 */);
+DistanceSensor right(10 /* D7 */, 9 /* ~D6 */);
+IRSensor ir_sensor(11 /* D8 */);
 
 void setup() {
 }
