@@ -26,6 +26,6 @@ class DistanceSensor {
    private:
     unsigned trigger_pin;
     unsigned echo_pin;
-    unsigned timeout;
-    unsigned time_to_mm;
+    float timeout;
+    float time_to_mm;
 };
