@@ -4,8 +4,8 @@
 
 class DistanceSensor {
    public:
-    DistanceSensor(unsigned trigger_pin, unsigned echo_pin)
-        : trigger_pin(trigger_pin), echo_pin(echo_pin) {
+    DistanceSensor(unsigned trigger_pin, unsigned echo_pin, float timeout = 23529.4, float time_to_mm = 5.88235)
+        : trigger_pin(trigger_pin), echo_pin(echo_pin), timeout(timeout), time_to_mm(time_to_mm) {
         pinMode(trigger_pin, OUTPUT);
         pinMode(echo_pin, INPUT);
     }
@@ -18,12 +18,14 @@ class DistanceSensor {
         delayMicroseconds(10);
         digitalWrite(trigger_pin, LOW);
         noInterrupts();
-        float d = pulseIn(echo_pin, HIGH, 23529.4); // max sensor dist ~4m
+        float duration = pulseIn(echo_pin, HIGH, timeout);
         interrupts();
-        return d / 5.88235;
+        return duration / time_to_mm;
     }
 
    private:
     unsigned trigger_pin;
     unsigned echo_pin;
+    unsigned timeout;
+    unsigned time_to_mm;
 };
