@@ -16,7 +16,12 @@ class DifferentialRobot {
         double right_wheel_velocity = (robot_velocity[0] + axle_length * robot_velocity[1]) / wheel_radius;
     }
 
+    // std::array<double, 3> step()
+
    private:
     double wheel_radius;
     double axle_length;
+    double x;
+    double y;
+    double heading;
 };
