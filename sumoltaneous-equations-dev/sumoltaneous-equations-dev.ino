@@ -26,7 +26,4 @@ void loop() {
     } else {
         drive_model.turn_left();
     }
-
-    printf("%d\n", front.echo());
-    delay(1000);
 }
