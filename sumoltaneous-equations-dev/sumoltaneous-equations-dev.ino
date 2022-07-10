@@ -1,5 +1,3 @@
-#include <array>
-
 #include "DifferentialRobot.hpp"
 #include "DistanceSensor.hpp"
 #include "Drive.hpp"

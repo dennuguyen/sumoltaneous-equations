@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <Arduino.h>
+
 class Motor {
    public:
     Motor(unsigned enable, unsigned input1_pin, unsigned input2_pin, bool direction = 0)

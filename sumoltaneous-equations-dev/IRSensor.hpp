@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Arduino.h>
+
 class IRSensor {
    public:
     IRSensor(unsigned read_pin, void* callback = read) : read_pin(read_pin) {
