@@ -8,6 +8,9 @@ class DistanceSensor {
         pinMode(echo_pin, INPUT);
     }
 
+    // We have to call echo continuously.
+    // The echo_pin can be made interruptable which interrupts the flow of the code.
+    // The callback function on interrupt is the sending of a move command.
     double echo() {
         digitalWrite(trigger_pin, false);
         delayMicroseconds(2);
