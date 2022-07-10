@@ -10,5 +10,5 @@ class IRSensor {
     }
 
    private:
-    unsigned read_pin;
+    const unsigned read_pin;
 };

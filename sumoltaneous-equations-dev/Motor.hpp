@@ -37,8 +37,8 @@ class Motor {
         digitalWrite(input2_pin, in2);
     }
 
-    unsigned enable_pin;
-    unsigned input1_pin;
-    unsigned input2_pin;
-    bool direction = 0;  // Swap polarity of direction if electronics are wired differently.
+    const unsigned enable_pin;
+    const unsigned input1_pin;
+    const unsigned input2_pin;
+    const bool direction = 0;  // Swap polarity of direction if electronics are wired differently.
 };

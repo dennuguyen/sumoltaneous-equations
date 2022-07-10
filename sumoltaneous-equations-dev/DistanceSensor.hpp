@@ -25,10 +25,10 @@ class DistanceSensor {
     }
 
    private:
-    unsigned trigger_pin;
-    unsigned echo_pin;
-    float timeout_ms;
-    float ms_to_mm;
-    float pulse_on_duration_ms;
-    float pulse_off_duration_ms;
+    const unsigned trigger_pin;
+    const unsigned echo_pin;
+    const float timeout_ms;
+    const float ms_to_mm;
+    const float pulse_on_duration_ms;
+    const float pulse_off_duration_ms;
 };
