@@ -18,20 +18,20 @@ class Motor {
         pinMode(input2_pin, OUTPUT);
     }
 
-    void forward(unsigned pwm = 255) {
+    auto forward(unsigned pwm = 255) const -> void {
         set(pwm, direction, !direction);
     }
 
-    void reverse(unsigned pwm = 255) {
+    auto reverse(unsigned pwm = 255) const -> void {
         set(pwm, !direction, direction);
     }
 
-    void stop() {
+    auto stop() const -> void {
         set(0, direction, direction);
     }
 
    private:
-    void set(unsigned pwm, bool in1, bool in2) {
+    auto set(unsigned pwm, bool in1, bool in2) const -> void {
         analogWrite(enable_pin, pwm);
         digitalWrite(input1_pin, in1);
         digitalWrite(input2_pin, in2);
