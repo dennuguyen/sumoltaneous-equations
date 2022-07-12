@@ -1,15 +1,14 @@
 #pragma once
 
+#include <Arduino.h>
+
 class IRSensor {
    public:
-    IRSensor(unsigned read_pin) : read_pin(read_pin) {
+    IRSensor(unsigned read_pin, void* callback) : read_pin(read_pin) {
         pinMode(read_pin, INPUT);
-    }
-
-    bool read() {
-        return digitalRead(read_pin);
+        attachInterrupt(digitalPinToInterrupt(read_pin), callback, HIGH);
     }
 
    private:
-    unsigned read_pin;
+    const unsigned read_pin;
 };

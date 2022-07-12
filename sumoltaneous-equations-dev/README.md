@@ -5,12 +5,13 @@
 ```mermaid
 stateDiagram-v2
     state if_ir_sensor_interrupt <<choice>>
-    state if_distance_sensor_interrupt <<choice>>
-    [*] --> PlanSearch
+    state if_distance_sensor <<choice>>
+    [*] --> if_distance_sensor
 
     if_ir_sensor_interrupt --> PlanEdgeAvoidance: IR sensor interrupts
 
-    if_distance_sensor_interrupt --> PlanAttack: Distance sensor interrupts
+    if_distance_sensor --> PlanAttack: Opponent detected
+    if_distance_sensor --> PlanSearch: Opponent not detected
 
     state PlanSearch {
         [*] --> SearchTurnRight
@@ -55,7 +56,7 @@ stateDiagram-v2
         join_after_move --> [*]
     }
 
-    Move --> PlanSearch
+    Move --> if_distance_sensor
 ```
 
 Move refers to moving the motors at max velocity. There are 3 moves that we can make:
