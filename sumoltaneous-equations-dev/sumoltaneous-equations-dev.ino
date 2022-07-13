@@ -1,28 +1,30 @@
+#include <Arduino.h>
+
 #include "DistanceSensor.hpp"
 #include "Drive.hpp"
 #include "IRSensor.hpp"
 #include "Motor.hpp"
 
-Motor left_motor(1 /* D1/TX */, 19 /* AO/D14 */, 20 /* A1/D15 */);
-Motor right_motor(1 /* D1/TX */, 21 /* A2/D16 */, 22 /* A3/D17 */);
+Motor left_motor(1, A0, A1);
+Motor right_motor(1, A2, A3);
 Drive drive_model(left_motor, right_motor);
 
-DistanceSensor left(5 /* D2 */, 6 /* ~D3 */);
-DistanceSensor front(7 /* D4 */, 8 /* ~D5 */);
-DistanceSensor right(10 /* D7 */, 9 /* ~D6 */);
-IRSensor ir_sensor(11 /* D8 */, &(drive_model.turn_left));
+DistanceSensor left(2, 3);
+DistanceSensor front(4, 5);
+DistanceSensor right(7, 6);
+IRSensor ir_sensor(8, &turn_left);
 
 void setup() {
 }
 
 void loop() {
     if (front.echo()) {
-        drive_model.forward();
+        forward(drive_model);
     } else if (left.echo()) {
-        drive_model.turn_left();
+        turn_left(drive_model);
     } else if (right.echo()) {
-        drive_model.turn_right();
+        turn_right(drive_model);
     } else {
-        drive_model.turn_left();
+        turn_left(drive_model);
     }
 }
