@@ -19,15 +19,15 @@ void setup() {
 }
 
 void loop() {
-    if (ir_sensor.read()) {
-        reverse(drive_model);
+    if (!ir_sensor.read()) {
+        drive_model.reverse();
     } else if (front.echo() < 1000) {
-        forward(drive_model);
+        drive_model.forward();
     } else if (left.echo() < 1000) {
-        turn_left(drive_model);
+        drive_model.turn_left();
     } else if (right.echo() < 1000) {
-        turn_right(drive_model);
+        drive_model.turn_right();
     } else {
-        turn_left(drive_model);
+        drive_model.turn_left();
     }
 }
