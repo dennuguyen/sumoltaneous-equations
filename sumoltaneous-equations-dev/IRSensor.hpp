@@ -4,9 +4,12 @@
 
 class IRSensor {
    public:
-    IRSensor(unsigned read_pin, void* callback) : read_pin(read_pin) {
+    IRSensor(unsigned read_pin) : read_pin(read_pin) {
         pinMode(read_pin, INPUT);
-        attachInterrupt(digitalPinToInterrupt(read_pin), callback, HIGH);
+    }
+
+    auto read() -> bool {
+        return digitalRead(read_pin);
     }
 
    private:

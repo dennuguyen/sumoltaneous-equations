@@ -11,6 +11,11 @@ class Drive {
         obj.right_motor_.forward();
     }
 
+    friend auto reverse(Drive& obj) -> void {
+        obj.left_motor_.reverse();
+        obj.right_motor_.reverse();
+    }
+
     friend auto turn_left(Drive& obj) -> void {
         obj.left_motor_.reverse();
         obj.right_motor_.forward();
@@ -33,6 +38,7 @@ class Drive {
 
 // Enable argument dependent lookup.
 auto forward(Drive& obj) -> void;
+auto reverse(Drive& obj) -> void;
 auto turn_left(Drive& obj) -> void;
 auto turn_right(Drive& obj) -> void;
 auto stop(Drive& obj) -> void;
