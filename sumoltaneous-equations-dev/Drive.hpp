@@ -1,3 +1,7 @@
+/**
+ * An abstraction to let us drive the robot via its motors.
+ */
+
 #pragma once
 
 #include "Motor.hpp"
