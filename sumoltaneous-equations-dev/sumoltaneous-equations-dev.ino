@@ -7,7 +7,7 @@
 
 Motor left_motor(1, A0, A1);
 Motor right_motor(1, A2, A3);
-Drive drive_model(left_motor, right_motor);
+Drive drive_model(left_motor, right_motor, 65, 180);
 
 DistanceSensor left(2, 3);
 DistanceSensor front(4, 5);
@@ -19,15 +19,23 @@ void setup() {
 }
 
 void loop() {
-    if (!ir_sensor.read()) {
-        drive_model.reverse();
-    } else if (front.echo() < 1000) {
-        drive_model.forward();
-    } else if (left.echo() < 1000) {
-        drive_model.turn_left();
-    } else if (right.echo() < 1000) {
-        drive_model.turn_right();
-    } else {
-        drive_model.turn_left();
-    }
+    // Old janky code.
+    // if (!ir_sensor.read()) {
+    //     drive_model.reverse();
+    // } else if (front.echo() < 1000) {
+    //     drive_model.forward();
+    // } else if (left.echo() < 1000) {
+    //     drive_model.turn_left();
+    // } else if (right.echo() < 1000) {
+    //     drive_model.turn_right();
+    // } else {
+    //     drive_model.turn_left();
+    // }
+
+    // Get the command to avoid the edge. This is prioritised before other plans.
+
+    // Get the command to attack the opponent.
+
+    // Execute the command.
+    drive_model.inverse_kinematics(1, 1);
 }

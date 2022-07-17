@@ -18,6 +18,10 @@ class Motor {
         pinMode(input2_pin, OUTPUT);
     }
 
+    auto setpoint(unsigned pwm, bool swap_direction = true) const -> void {
+        set(pwm, swap_direction & direction, swap_direction & !direction);
+    }
+
     auto forward(unsigned pwm = 255) const -> void {
         set(pwm, direction, !direction);
     }

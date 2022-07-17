@@ -8,34 +8,58 @@
 
 class Drive {
    public:
-    Drive(Motor& left_motor, Motor& right_motor) : left_motor_(left_motor), right_motor_(right_motor) {}
+    Drive(Motor& left_motor, Motor& right_motor, float wheel_radius, float axle_length) : left_motor(left_motor), right_motor(right_motor), wheel_radius(wheel_radius), axle_length(axle_length) {}
 
-    auto forward() -> void {
-        left_motor_.forward();
-        right_motor_.forward();
+    // Controlling the robot via linear_velocity and angular_velocity inputs.
+    auto inverse_kinematics(float linear_velocity, float angular_velocity) -> void {
+        const float left_wheel_velocity = (linear_velocity - axle_length * angular_velocity) / wheel_radius;
+        const float right_wheel_velocity = (linear_velocity + axle_length * angular_velocity) / wheel_radius;
+        drive(left_wheel_velocity, right_wheel_velocity);
+    }
+
+    // Controlling the robot via its left_wheel_velocity and right_wheel_velocity.
+    auto drive(float left_wheel_velocity, float right_wheel_velocity) -> void {
+        left_motor.drive(velocity_to_pwm(left_wheel_velocity));
+        right_motor.drive(velocity_to_pwm(right_wheel_velocity));
+    }
+
+    // Convenience commands to simply drive forward, reverse, turn_left, turn_right, and stop.
+    auto forward(float left_velocity, float right_velocity) -> void {
+        left_motor.forward();
+        right_motor.forward();
     }
 
     auto reverse() -> void {
-        left_motor_.reverse();
-        right_motor_.reverse();
+        left_motor.reverse();
+        right_motor.reverse();
     }
 
     auto turn_left() -> void {
-        left_motor_.reverse();
-        right_motor_.forward();
+        left_motor.reverse();
+        right_motor.forward();
     }
 
     auto turn_right() -> void {
-        left_motor_.forward();
-        right_motor_.reverse();
+        left_motor.forward();
+        right_motor.reverse();
     }
 
     auto stop() -> void {
-        left_motor_.stop();
-        right_motor_.stop();
+        left_motor.stop();
+        right_motor.stop();
     }
 
    private:
-    Motor& left_motor_;
-    Motor& right_motor_;
+    // Converts an angular_velocity to PWM signal.
+    // We do this because the motors are controlled directly by a PWM signal.
+    auto velocity_to_pwm(float angular_velocity) -> float {
+    }
+
+    // Properties of the kinematic model.
+    const float wheel_radius;
+    const float axle_length;
+
+    // Motor aggregation.
+    Motor& left_motor;
+    Motor& right_motor;
 };
