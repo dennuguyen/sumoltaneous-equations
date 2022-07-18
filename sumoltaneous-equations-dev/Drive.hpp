@@ -19,8 +19,8 @@ class Drive {
 
     // Controlling the robot via its left_wheel_velocity and right_wheel_velocity.
     auto drive(float left_wheel_velocity, float right_wheel_velocity) -> void {
-        left_motor.drive(velocity_to_pwm(left_wheel_velocity));
-        right_motor.drive(velocity_to_pwm(right_wheel_velocity));
+        left_motor.set(left_wheel_velocity);
+        right_motor.set(right_wheel_velocity);
     }
 
     // Convenience commands to simply drive forward, reverse, turn_left, turn_right, and stop.
