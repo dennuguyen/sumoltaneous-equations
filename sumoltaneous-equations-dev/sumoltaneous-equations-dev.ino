@@ -5,9 +5,9 @@
 #include "IRSensor.hpp"
 #include "Motor.hpp"
 
-Motor left_motor(1, A0, A1);
-Motor right_motor(1, A2, A3);
-Drive drive_model(left_motor, right_motor, 65, 180);
+Motor left_motor(10, A2, A3);
+Motor right_motor(11, A0, A1);
+Drive drive_model(left_motor, right_motor, 65, 160);
 
 DistanceSensor left(2, 3);
 DistanceSensor front(4, 5);
@@ -37,5 +37,5 @@ void loop() {
     // Get the command to attack the opponent.
 
     // Execute the command.
-    drive_model.inverse_kinematics(1, 1);
+    drive_model.inverse_kinematics(255, 0);
 }

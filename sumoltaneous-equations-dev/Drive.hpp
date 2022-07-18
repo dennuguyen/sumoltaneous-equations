@@ -19,12 +19,12 @@ class Drive {
 
     // Controlling the robot via its left_wheel_velocity and right_wheel_velocity.
     auto drive(float left_wheel_velocity, float right_wheel_velocity) -> void {
-        left_motor.set(left_wheel_velocity);
-        right_motor.set(right_wheel_velocity);
+        left_motor.set_velocity(left_wheel_velocity);
+        right_motor.set_velocity(right_wheel_velocity);
     }
 
     // Convenience commands to simply drive forward, reverse, turn_left, turn_right, and stop.
-    auto forward(float left_velocity, float right_velocity) -> void {
+    auto forward() -> void {
         left_motor.forward();
         right_motor.forward();
     }
@@ -50,11 +50,6 @@ class Drive {
     }
 
    private:
-    // Converts an angular_velocity to PWM signal.
-    // We do this because the motors are controlled directly by a PWM signal.
-    auto velocity_to_pwm(float angular_velocity) -> float {
-    }
-
     // Properties of the kinematic model.
     const float wheel_radius;
     const float axle_length;
