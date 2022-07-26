@@ -7,14 +7,22 @@
 #include "IRSensor.hpp"
 
 class EdgeAvoidance {
-    public:
+   public:
     EdgeAvoidance(IRSensor& left_sensor, IRSensor& right_sensor) : left_sensor(left_sensor), right_sensor(right_sensor) {}
 
-    auto do_something() -> float {
-        
+    auto avoid() -> int {
+        auto const left_value = left_sensor.read();
+        auto const right_value = right_sensor.read();
+        if (left_value && right_value) {
+            return 0;
+        } else if (left_value) {
+            return -1;
+        } else if (right_value) {
+            return -3;
+        }
     }
 
-    private:
+   private:
     IRSensor& left_sensor;
     IRSensor& right_sensor;
 };
