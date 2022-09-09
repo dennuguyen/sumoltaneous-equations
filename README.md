@@ -1,19 +1,7 @@
 # Sumoltaneous Equations
-
-## Rules
-
-![rules](README/bot-rules.jpg)
-
-## Problem Statement
+atement
 
 Build a UGV to win the sumobot competition i.e. to win, it must be the last robot to overstep the boundary of the dohyo. It must also adhere to the rules and use the parts provided by UNSW Create.
-
-## Budget
-
-| Name | Quantity | Price Per Item | Link |
-| --- | --- | --- | --- |
-| Wheel (65 OD) | 2 | 3 | https://store.createunsw.com.au/yellow-wheel-65-mm |
-| MPU-6050 | 1| 8 | https://store.createunsw.com.au/gyroscope-accelerometer |
 
 ## Resources
 
